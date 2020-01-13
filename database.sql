@@ -10,14 +10,14 @@ GO
 CREATE SCHEMA dict AUTHORIZATION pnad;
 GO
 
-CREATE TABLE dict.pnad_dom (
+CREATE TABLE dict.pnad_resid (
 	code SERIAL PRIMARY KEY,
   question BYTEA UNIQUE NOT NULL,
   ttype INT NOT NULL,
   category BYTEA NOT NULL
 );
 
-CREATE TABLE dict.pnad_pes (
+CREATE TABLE dict.pnad_pers (
   code SERIAL PRIMARY KEY,
   question BYTEA UNIQUE NOT NULL,
   ttype INT NOT NULL,
@@ -31,7 +31,7 @@ CREATE TABLE dict.pnadc (
   category BYTEA NOT NULL
 );
 
-CREATE TABLE databases.pnad_dom (
+CREATE TABLE databases.pnad_resid (
   V0101 INT default -1,
   UF INT default -1,
   V0102 INT default -1,
@@ -193,7 +193,7 @@ CREATE TABLE databases.pnad_dom (
   V4632 INT default -1,
   V4633 INT default -1);
 
-CREATE TABLE databases.pnad_pes (
+CREATE TABLE databases.pnad_pers (
   V0101 INT default -1,
   UF INT default -1,
   V0102 INT default -1,
